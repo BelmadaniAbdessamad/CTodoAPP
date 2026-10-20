@@ -4,7 +4,7 @@
 
 int main()
 {
-    int MAX_TODOS = 10;
+    int MAX_TODOS = 20;
     Todo *todos = malloc(MAX_TODOS * sizeof(Todo));
     if(todos == NULL) {
         printf("\nERROR allocating memory in main.c\n");
@@ -12,6 +12,7 @@ int main()
     }
 
     todo_app(todos,MAX_TODOS);
+    free(todos);
 
     return 0;
 }
